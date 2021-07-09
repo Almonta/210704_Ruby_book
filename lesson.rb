@@ -124,9 +124,23 @@
 # class Product
 #   DEFAULT_PRICE = 0
 #   Product.freeze
-#   DEFAULT_PRICE = 1000
+#   def foo
+#     'foo'
+#   end
+#   # DEFAULT_PRICE = 1000
 # end
 # p Product::DEFAULT_PRICE
+# product = Product.new
+# p product.foo
+
+
+class Product
+  DEFAULT_PRICE = 0
+  DEFAULT_PRICE = 1000
+  Product.freeze
+end
+p Product::DEFAULT_PRICE
+
 
 
 # class Product
@@ -152,15 +166,15 @@
 # p Product.names_without_foo
 
 
-SOME_NAMES = ['Foo'.feeze, 'Bar'.freeze, 'Baz'.freeze].freeze
+# SOME_NAMES = ['Foo'.feeze, 'Bar'.freeze, 'Baz'.freeze].freeze
 
-SOME_NAMES = ['Foo', 'Bar', 'Baz'].map(&:freeze).freeze
+# SOME_NAMES = ['Foo', 'Bar', 'Baz'].map(&:freeze).freeze
 
-class Product
-  SOME_NAMES = ['Foo', 'Bar', 'Baz'].freeze
-  def self.names_without_foo(name = SOME_NAMES)
-    name.delete('Foo')
-    names
-  end
-end
-p Product.names_without_foo
+# class Product
+#   SOME_NAMES = ['Foo', 'Bar', 'Baz'].freeze
+#   def self.names_without_foo(name = SOME_NAMES)
+#     name.delete('Foo')
+#     names
+#   end
+# end
+# p Product.names_without_foo
