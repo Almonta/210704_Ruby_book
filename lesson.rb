@@ -134,12 +134,12 @@
 # p product.foo
 
 
-class Product
-  DEFAULT_PRICE = 0
-  DEFAULT_PRICE = 1000
-  Product.freeze
-end
-p Product::DEFAULT_PRICE
+# class Product
+#   DEFAULT_PRICE = 0
+#   DEFAULT_PRICE = 1000
+#   Product.freeze
+# end
+# p Product::DEFAULT_PRICE
 
 
 
@@ -178,3 +178,18 @@ p Product::DEFAULT_PRICE
 #   end
 # end
 # p Product.names_without_foo
+
+
+class Book
+  # attr_accessor :title, :price
+
+  def initialize title
+    @title = title
+    @status = "onsale"
+  end
+
+
+book = Book.new "新しい本"
+p book.title
+
+end
